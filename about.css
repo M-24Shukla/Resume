@@ -1,0 +1,258 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('bg.png');
+    background-size: cover;
+    font-family: consolas;
+    margin-left: 120px;
+}
+
+.intro {
+    margin: 20px 0px 0px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#hi{
+    color: #c7c7c7;
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+#name {
+    color: #fff;
+    font-size: 6em;
+    margin: 0;
+}
+
+#sd {
+    color: #e3e3e3;
+    font-size: 2em;
+    margin: 5px;
+}
+
+.profile {
+    float: left;
+    margin-top: 180px;
+    line-height: 140%;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    box-sizing: border-box;
+    width: 290px;
+    color: #e3e3e3;
+    font-size: 1.3em;
+}
+
+
+.skills {
+    margin-left: 130px;
+    margin-top: 30px;
+    float: left;
+    position: relative;
+    width: 300px;
+}
+
+.skills h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.skills ul {
+    position: relative;
+}
+
+.skills ul li {
+    font-size: 1em;
+    position: relative;
+    left: 0;
+    color: #999;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #2196f3;
+    transition: 0.5s;
+}
+.skills ul li:hover {
+    left: 10px;
+}
+
+.skills ul li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #2196f3;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.skills ul li:hover::before {
+    transform: scaleX(1);
+}
+
+
+
+.skills ul li span {
+    position: relative;
+    padding: 8px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.skills ul li:hover span {
+    color: #111;
+}
+
+
+/**********************************************************
+btn
+/**********************************************************/
+
+.btn {
+    font-family: consolas;
+    transform: translate(20%, 550%);
+/*    transform: translateY(0%);*/
+}
+
+.btn a{
+    
+    position:  relative;
+    display:  inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s
+}
+
+.btn a:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+.btn a span {
+    position: absolute;
+    display: inline-block;
+}
+
+.btn a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.btn a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.btn a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+.btn a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.btn a span:nth-child(2) {
+    right: 0;
+    top: -100%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+.btn a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.btn a span:nth-child(4) {
+    left: 0;
+    bottom: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.btn a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/**********************************************************
+mouse
+/**********************************************************/
+div.light {
+  z-index:50000;
+  pointer-events:none;
+  background-color:#FFF;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translate(-50%,-50%);
+  transition:width .25s, height .25s, opacity 1s;
+  
+  opacity: 0;
+
+  mix-blend-mode: difference;
+}
+
+.light.hover {
+  background-size: cover;
+  background-origin: center center;
+  width:250px;
+  height:250px;
+  
+  transition:width .25s, height .25s;
+}
+
+.light.video {
+  background-size: cover;
+  background-origin: center center;
+  width:100px !important;
+  height:100px !important;
+  background-image: url(../images/play.png);
+  
+  transition:width .25s, height .25s;
+
+  z-index: 520000;
+}
+
+.light.link {
+  width:10px;
+  height:10px;
+  
+  transition:width .25s, height .25s;
+}
+/*
+
+ #container {
+  position: relative;
+  width: 100%; 
+  height: auto;
+  background-color: rgba(20,20,20,1);
+  padding-bottom: 50px;
+ }
+*/
+
