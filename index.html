@@ -11,17 +11,7 @@
             <div class="light" style="left: 477px; top: 1944px; opacity: 1; background-image: none;"></div>
             <div class ="content-wrap">
                 <ul class = "fly-in-text">
-                    <li>H</li>
-                    <li>e</li>
-                    <li>l</li>
-                    <li>l</li>
-                    <li>o</li>
-                    <li>&nbsp;</li>
-                    <li>W</li>
-                    <li>o</li>
-                    <li>r</li>
-                    <li>l</li>
-                    <li>d</li>
+                    <li>Hello World</li>
                 </ul>
                 <a href ="about.html" class ="enter-button" style="cursor: non !important"> ENTER </a>
             </div>
@@ -33,6 +23,11 @@
                 setTimeout(function() {
                     welcomeSection.removeClass('content-hidden');
                 }, 800);
+                document.body.addEventListener("keydown", function (event) {
+                    if (event.keyCode === 13) {
+                        window.location.replace("about.html");
+                    }
+                });
 //                enterButton.on('click', function(e) {
 //                    e.preventDefault();
 //                    welcomeSection.addClass('content-hidden').fadeOut();
